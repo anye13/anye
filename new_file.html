@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<!-- MathJax 是一个开源的 web 数学公式 渲染器，由 JS 编写而成。 -->
+		<!-- 		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full">
+		</script> -->
+		<script src="mathjax-config.js" defer></script>
+		<script type="text/javascript" id="MathJax-script" async
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+		</script>
+		<!-- 引入 Bootstrap -->
+		<link rel="stylesheet" href="https://7npmedia.w3cschool.cn/w3.css">
+		<style>
+			h1{
+				text-align: center;
+			}
+			.underline{
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>数学专升本错题</h1>
+		<div>
+			<h2>选择题：</h2>
+			<ol>
+				<li>
+					<p class="question-one">
+						设\(f(x)=cosxe^{sinxarctanx},-\infty \lt x \lt +\infty\)，则此函数是(&emsp;)<br>
+						A. 有界函数&emsp;B. 奇函数&emsp;C. 偶函数&emsp;D. 周期函数
+					</p>
+					<!-- 折叠器 -->
+					<div style="width:auto;height: auto;overflow: auto;">
+						<button onclick="myFunction('Demo1')"
+							class="w3-btn w3-block w3-black w3-left-align">查看答案</button>
+						<div id="Demo1" class="w3-container w3-hide">
+							<p>
+								答案: A<br>
+								解析：把\(x=\)&plusmn;代入得，\(f(1)\ne\
+								f(-1)\)且\(f(1)\ne-f(-1)\),故排除B，C。显然\(f(x)\)在R上不是周期函数，故D错。用排除法故选A(\(f(x)\le1\)，故有界)
+							</p>
+						</div>
+					</div>
+					
+				</li>
+				<li>
+					<p class="question-three">
+						当\(x\rightarrow0\)时，\(f(x)=\sqrt[3]{1+x^e}-1,g(x)=3x^3\),则\(f(x)为g(x)\)的（&emsp;）<br>
+						A.等价无穷小&emsp;B.同阶但非等价的无穷小&emsp;C.低阶无穷小&emsp;D.高阶无穷小
+					</p>
+					<!-- 折叠器 -->
+					<div style="width:auto;height: auto;overflow: auto;">
+						<button onclick="myFunction('Demo3')"
+							class="w3-btn w3-block w3-black w3-left-align">查看答案</button>
+						<div id="Demo3" class="w3-container w3-hide">
+							<p>
+								答案：C <br>
+								原式\(=\lim_{x\to0} \frac{\sqrt[3]{1+x^e}-1}{3x^3}=\lim_{x\to0} \frac{\frac13x^e}{3x^3}=\lim_{x\to0} \frac{1}{9x^{3-e}}=\infty\),
+								故为低阶无穷小
+							</p>
+						</div>
+					</div>
+				</li>
+			</ol>
+			<h2>填空题：</h2>
+			<ol>
+				<li>
+					<p class="question-two">
+						已知函数\(f(x)\)的定义域为[0,1]，求\(f(x+\frac{1}{4})+f(x-\frac{1}{4})\)的定义域
+					</p>
+					<!-- 折叠器 -->
+					<div style="width:auto;height: auto;overflow: auto;">
+						<button onclick="myFunction('Demo2')"
+							class="w3-btn w3-block w3-black w3-left-align">查看答案</button>
+						<div id="Demo2" class="w3-container w3-hide">
+							\(f(x)\)的定义域为[0,1]，所以
+							\(\begin{cases} x+\frac{1}{4}\in[0,1]\\ x-\frac{1}{4}\in[0,1]  \end{cases}\)
+							\(\Rightarrow\)
+							\(\begin{cases} x\in[-\frac{1}{4},\frac{3}{4}]\\ x\in[\frac{1}{4}, \frac{5}{4}]  \end{cases}\)
+							\(\Rightarrow\)
+							\([\frac{1}{4},\frac{3}{4}]\)
+						</div>
+					</div>
+				</li>
+				<li>
+					<p class="question-four">
+						求极限\(=\lim_{x\to0} (\frac{\sin x}{x})^{\frac{1}{1-\cos x}}=\)<font class="underline">&emsp;&emsp;&emsp;&emsp;</font>
+					</p>
+					<!-- 折叠器 -->
+					<div style="width:auto;height: auto;overflow: auto;">
+						<button onclick="myFunction('Demo4')"
+							class="w3-btn w3-block w3-black w3-left-align">查看答案</button>
+						<div id="Demo4" class="w3-container w3-hide">
+							<p>
+								原式\(=\lim_{x\to0} e^{\frac{1}{1-\cos x}\ln (1+\frac{\sin x}{x}-1)}
+								=e^{\lim_{x\to0} \frac{\frac{\sin x}{x}-1}{\frac12x^2}}
+								=e^{-\frac13}\)
+							</p>
+						</div>
+					</div>
+				</li>
+			</ol>
+			<h2>证明题：</h2>
+		</div>
+		<script>
+			function myFunction(id) {
+				var x = document.getElementById(id);
+				if (x.className.indexOf("w3-show") == -1) {
+					x.className += " w3-show";
+				} else {
+					x.className = x.className.replace(" w3-show", "");
+				}
+			}
+		</script>
+
+	</body>
+</html>
